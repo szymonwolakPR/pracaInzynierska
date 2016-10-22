@@ -1,0 +1,12 @@
+body {
+  background-color: #A9E3EE; }
+  body h1 {
+    color: red;
+    text-align: center; }
+  body #selections {
+    float: left;
+    width: 300px;
+    height: 500px; }
+  body #community_map {
+    width: 640px;
+    margin: auto; }
