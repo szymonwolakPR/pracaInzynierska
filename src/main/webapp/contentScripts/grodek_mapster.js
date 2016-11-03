@@ -38,6 +38,10 @@ $(document).ready(function () {
                 	}]
                 });
             },
+            onClick: function() {
+               window.location=this.href;
+               return false;
+            },
             toolTipClose: ["tooltip-click", "area-click"],
             areas: [
                 {

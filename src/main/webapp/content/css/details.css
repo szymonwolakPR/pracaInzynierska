@@ -1,0 +1,21 @@
+#showcase {
+  width: 450px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: grey;
+  margin: auto; }
+  #showcase h1 {
+    text-align: center;
+    padding-top: 20px; }
+  #showcase h2 {
+    text-align: center;
+    padding-top: 20px; }
+  #showcase p {
+    text-align: center; }
+  #showcase #center {
+    width: 300px;
+    height: 350px;
+    margin: auto; }
+    #showcase #center img {
+      width: 300px;
+      height: 350px; }

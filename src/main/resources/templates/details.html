@@ -1,0 +1,20 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${details.name}">Blog Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/content/css/details.css"></link>
+</head>
+<body>
+
+<div id="showcase">
+    <h1 th:text="${details.name}"> name </h1>
+    <div id = "center">
+        <img th:src="@{/content/images/spots/} + ${details.photo}"/>
+    </div>
+    <h2 th:text="${details.place}"> place </h2>
+    <p th:text="${details.description}"> description </p>
+</div>
+
+</body>
+</html>

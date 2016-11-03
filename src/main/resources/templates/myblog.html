@@ -1,20 +1,66 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title th:text="#{myblog.title}">Blog Title</title>
+    <title th:text="${andrzej.name}">Blog Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style>
+        #showcase{
+            width: 450px;
+            height: 600px;
+            border-radius: 10px;
+            background-color: grey;
+            margin: auto;
+        }
+        img
+        {
+            width: 300px;
+            height: 350px;
+        }
+        h1{
+            text-align: center;
+            padding-top: 20px;
+        }
+        h2{
+            text-align: center;
+            padding-top: 20px;
+        }
+        p
+        {
+            text-align: center;
+        }
+        #center{
+            width: 300px;
+            height: 350px;
+            margin: auto;
+        }
+    </style>
+
 </head>
 <body>
+
+
+<div id="showcase">
+    <h1 th:text="${andrzej.name}"> name </h1>
+    <div id = "center">
+        <img id="sh-photo" src="as.png"></img>
+    </div>
+    <h2 th:text="${andrzej.place}"> place </h2>
+    <p th:text="${andrzej.description}"> andrzej </p>
+</div>
+
 <h3 th:text="#{myblog.title}"> Blog Title </h3>
 Date : <b th:text="${currentDate}">Sat Oct 24 2015</b><br/>
+ADSADDASD <h3 th:text="${andrzej.description}"> andrzej </h3>
 <p th:text="#{myblog.msg}">Blog Message</p>
 <h3 th:text="#{myblog.writers}"> Writers </h3>
 <table>
     <tr th:each="writer : ${writers}">
         <td th:text="${writer.name}">name</td>
         <td> - </td>
-        <td th:text="${writer.location}">location</td>
+        <td th:text="${writer.place}">location</td>
     </tr>
 </table>
+
 </body>
 </html>
