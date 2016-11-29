@@ -20,6 +20,8 @@
     </prerequisites>
 
     <properties>
+
+        <start-class>shcases.ShowCasesApp</start-class>
         <assertj-core.version>3.5.2</assertj-core.version>
         <awaitility.version>1.7.0</awaitility.version>
         <commons-io.version>2.5</commons-io.version>

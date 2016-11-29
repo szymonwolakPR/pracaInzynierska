@@ -1,20 +1,10 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Blog Title</title>
+    <title th:text="${photoName}">Area Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/content/css/details.css"></link>
     <style>
-
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-        }
-        h1 {
-            font-size: 20px;
-        }
-        div {
-            width: 100%;
-        }
         img[usemap] {
             border: none;
             height: auto;
@@ -26,7 +16,7 @@
 <body>
 
 <div>
-    <img width="650" height="600" usemap="#areas" th:src="@{/content/images/spots/grodek_map.png}"/>
+    <img width="550" height="500" usemap="#areas" th:src="@{/content/images/spots/} + ${photoName} + @{.png}"/>
     <map id="community_areas" name="areas" >
          <area th:each="writer : ${place}" id="zbyszyce" th:attr="coords=${writer.coords}" name="dfsdf" alt="" title="" th:href="@{/details/} + ${writer.id}" shape="poly"  />
     </map>
